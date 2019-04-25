@@ -1,0 +1,9 @@
+defaults:
+  ps:
+    format: "{{.ID}}\t {{.Names}}\t {{.Status}}\t {{.RunningFor}}"
+templates:
+  ps:
+    single:
+      - exec -it $ /bin/bash
+      - logs $ -f
+      - stop $
